@@ -1,0 +1,38 @@
+{
+  "ShowHidden": false,
+  "ShowAllFiles": false,
+  "SaveDisabled": false,
+  "SSoTmeProjectId": "f5e71a10-7b1b-4ea0-b31f-9c58f099505d",
+  "Name": "13-ways-demo",
+  "ProjectSettings": [
+    {
+      "ProjectSettingId": "16c37d82-dc98-4bf5-b55a-ef2e11ca91f5",
+      "Name": "project-name",
+      "Value": "13-ways-demo"
+    }
+  ],
+  "ProjectTranspilers": [
+    {
+        "MatchedTranspiler": {
+            "TranspilerId": "d4c9b6b7-e40b-44d6-9550-86ef55cd9623",
+            "Name": "UrlToFile",
+            "Description": "Similar to curl, this command will perform a web request and return the resulting html as a filename"
+        },
+        "ProjectTranspilerId": "dbb5cd5b-fd92-4974-aaa2-55adeeea8b78",
+        "Name": "UrlToFile",
+        "RelativePath": "/SSoT",
+        "CommandLine": "url-to-file https://raw.githubusercontent.com/eejai42/13-ways-of-looking-at-a-driver/master/SSoT/TWOLAADriver.xml?token=GHSAT0AAAAAABWKD3FUAXVSD2DTETQMBUAYYWGPU4Q -o TWOLAADriver.xml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+        "Name": "XmlXsltTransform",
+        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset."
+      },
+      "ProjectTranspilerId": "6099acc1-0e41-4a30-b5ea-abd63a800874",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/TestProject1",
+      "CommandLine": "xml-xslt-transform -i ..\\SSoT\\TWOLAADriver.xml -i CreateCode.xslt"
+    }
+  ]
+}
